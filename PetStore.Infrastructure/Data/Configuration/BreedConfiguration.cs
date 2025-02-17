@@ -8,8 +8,11 @@ namespace PetStore.Infrastructure.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Breed> breed)
         {
-            //Test if throws an error on migration
-            //breed.HasKey(b => b.Id);
+            breed
+                .HasMany(b => b.Pets)
+                .WithOne(p => p.Breed)
+                .HasForeignKey(p => p.BreedId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

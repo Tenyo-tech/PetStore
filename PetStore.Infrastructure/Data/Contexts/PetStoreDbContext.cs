@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PetStore.Data.Context;
 using PetStore.Data.Entities;
+using System.Reflection;
 
 namespace PetStore.Infrastructure.Data.Contexts
 {
@@ -35,6 +36,9 @@ namespace PetStore.Infrastructure.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // Automatically apply all IEntityTypeConfiguration<T> classes
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

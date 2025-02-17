@@ -11,6 +11,12 @@ namespace PetStore.Infrastructure.Data.Configuration
             user
                 .HasIndex(u => u.Email)
                 .IsUnique();
+
+            user
+                .HasMany(u => u.Orders)
+                .WithOne(o => o.User)
+                .HasForeignKey(o => o.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

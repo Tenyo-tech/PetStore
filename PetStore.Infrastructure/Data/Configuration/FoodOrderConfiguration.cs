@@ -8,20 +8,7 @@ namespace PetStore.Infrastructure.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<FoodOrder> foodOrder)
         {
-            //Test without
-            //foodOrder.HasKey(to => new { to.FoodId, to.OrderId });
-
-            foodOrder
-                .HasOne(fo => fo.Order)
-                .WithMany(o => o.Food)
-                .HasForeignKey(fo => fo.OrderId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            foodOrder
-                .HasOne(fo => fo.Food)
-                .WithMany(f => f.Orders)
-                .HasForeignKey(fo => fo.FoodId)
-                .OnDelete(DeleteBehavior.Restrict);
+            foodOrder.HasKey(to => new { to.FoodId, to.OrderId });
         }
     }
 }
