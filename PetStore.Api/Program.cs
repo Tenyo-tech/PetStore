@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using PetStore.Data.Context;
+using PetStore.Data.DataProcessor;
 using PetStore.Infrastructure.Data.Contexts;
+using PetStore.Infrastructure.DataProcessor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +28,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddTransient<IDeserializer, Deserializer>();
+builder.Services.AddTransient<ISerializer, Serializer>();
+builder.Services.AddTransient<IPetStoreDbContext, PetStoreDbContext>();
+
 
 var app = builder.Build();
 

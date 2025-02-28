@@ -1,0 +1,86 @@
+[
+  {
+    "Name": "Maine Coon",
+    "ImageUrl": "https://sustainablecats.com/wp-content/uploads/2024/05/MAine-Coon-Giant.jpg"
+  },
+  {
+    "Name": "Persian Cat",
+    "ImageUrl": "https://www.purina.co.uk/sites/default/files/styles/1600x900/public/2020-08/Persian-Cat.jpg?itok=kL5pGT49"
+  },
+  {
+    "Name": "Bulgarian Shepherd Dog",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2021/01/Bulgarian-Shepherd-Dog-hero.jpg"
+  },
+  {
+    "Name": "Siberian Husky",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Siberian-Husky-hero.jpg"
+  },
+  {
+    "Name": "Doberman Pinscher",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Doberman-Pinscher-hero.jpg"
+  },
+  {
+    "Name": "German Shepherd",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/German-Shepherd-hero.jpg"
+  },
+  {
+    "Name": "British Shorthair",
+    "ImageUrl": "https://www.purina.co.uk/sites/default/files/styles/1600x900/public/2020-07/British-Shorthair-Cat.jpg?itok=Yh26PEp6"
+  },
+  {
+    "Name": "French Bulldog",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/French-Bulldog-hero.jpg"
+  },
+  {
+    "Name": "Cavalier King Charles Spaniel",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Cavalier-King-Charles-Spaniel-hero.jpg"
+  },
+  {
+    "Name": "Ragdoll",
+    "ImageUrl": "https://www.purina.co.uk/sites/default/files/styles/1600x900/public/2020-06/Ragdoll-Cat.jpg?itok=F7uJpe6n"
+  },
+  {
+    "Name": "Shih Tzu",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Shih-Tzu-hero.jpg"
+  },
+  {
+    "Name": "Bengal Cat",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2021/01/Bengal-Cat-hero.jpg"
+  },
+  {
+    "Name": "Yorkshire Terrier",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Yorkshire-Terrier-hero.jpg"
+  },
+  {
+    "Name": "Boxer",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Boxer-hero.jpg"
+  },
+  {
+    "Name": "Labrador Retriever",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Labrador-Retriever-hero.jpg"
+  },
+  {
+    "Name": "Chihuahua",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Chihuahua-hero.jpg"
+  },
+  {
+    "Name": "Poodle",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Poodle-hero.jpg"
+  },
+  {
+    "Name": "Airedale Terrier",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Airedale-Terrier-hero.jpg"
+  },
+  {
+    "Name": "Shiba Inu",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Shiba-Inu-hero.jpg"
+  },
+  {
+    "Name": "Border Collie",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Border-Collie-hero.jpg"
+  },
+  {
+    "Name": "Saint Bernard",
+    "ImageUrl": "https://www.akc.org/wp-content/uploads/2020/11/Saint-Bernard-hero.jpg"
+  }
+]

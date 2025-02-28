@@ -1,0 +1,202 @@
+[
+  {
+    "Name": "Rubber Chew Bone",
+    "Description": "Durable rubber chew bone for dogs.",
+    "DistributorPrice": "5",
+    "Price": "10",
+    "BrandId": 15,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Interactive Cat Feather Wand",
+    "Description": "Feather wand to engage cats in play.",
+    "DistributorPrice": "3",
+    "Price": "7",
+    "BrandId": 11,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Bird Swing Perch",
+    "Description": "Wooden swing perch for small birds.",
+    "DistributorPrice": "4",
+    "Price": "8",
+    "BrandId": 18,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Floating Fish Toy",
+    "Description": "Floating toy for aquarium fish.",
+    "DistributorPrice": "2",
+    "Price": "5",
+    "BrandId": 20,
+    "CategoryId": 4
+  },
+  {
+    "Name": "Squeaky Plush Dog Toy",
+    "Description": "Soft plush toy with squeaker for dogs.",
+    "DistributorPrice": "6",
+    "Price": "12",
+    "BrandId": 16,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Catnip-Filled Mouse",
+    "Description": "Mouse-shaped toy filled with catnip.",
+    "DistributorPrice": "3",
+    "Price": "6",
+    "BrandId": 11,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Parrot Chew Toy",
+    "Description": "Colorful chew toy for parrots.",
+    "DistributorPrice": "5",
+    "Price": "10",
+    "BrandId": 18,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Aquarium Bubble Maker",
+    "Description": "Creates bubbles in fish tanks for entertainment.",
+    "DistributorPrice": "7",
+    "Price": "14",
+    "BrandId": 20,
+    "CategoryId": 4
+  },
+  {
+    "Name": "Dental Rope Toy",
+    "Description": "Rope toy that helps clean dog's teeth.",
+    "DistributorPrice": "4",
+    "Price": "9",
+    "BrandId": 15,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Laser Pointer for Cats",
+    "Description": "Laser pointer to keep cats active.",
+    "DistributorPrice": "5",
+    "Price": "11",
+    "BrandId": 11,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Bird Mirror with Bell",
+    "Description": "Mirror toy with bell for birds.",
+    "DistributorPrice": "3",
+    "Price": "7",
+    "BrandId": 18,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Floating Turtle Toy",
+    "Description": "Floating turtle-shaped toy for aquariums.",
+    "DistributorPrice": "2",
+    "Price": "5",
+    "BrandId": 20,
+    "CategoryId": 4
+  },
+  {
+    "Name": "Tennis Ball Fetch Toy",
+    "Description": "Classic tennis ball for dog fetch games.",
+    "DistributorPrice": "2",
+    "Price": "5",
+    "BrandId": 16,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Crinkle Tunnel for Cats",
+    "Description": "Collapsible tunnel that makes crinkle sounds.",
+    "DistributorPrice": "8",
+    "Price": "16",
+    "BrandId": 11,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Bird Foraging Toy",
+    "Description": "Toy that encourages birds to forage.",
+    "DistributorPrice": "6",
+    "Price": "12",
+    "BrandId": 18,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Aquarium Decor Castle",
+    "Description": "Decorative castle for fish tanks.",
+    "DistributorPrice": "10",
+    "Price": "20",
+    "BrandId": 20,
+    "CategoryId": 4
+  },
+  {
+    "Name": "Rubber Ball with Bell",
+    "Description": "Rubber ball containing a bell for dogs.",
+    "DistributorPrice": "4",
+    "Price": "8",
+    "BrandId": 15,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Cat Scratching Post",
+    "Description": "Vertical post for cats to scratch.",
+    "DistributorPrice": "15",
+    "Price": "30",
+    "BrandId": 11,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Bird Ladder Toy",
+    "Description": "Wooden ladder for birds to climb.",
+    "DistributorPrice": "5",
+    "Price": "10",
+    "BrandId": 18,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Floating LED Light Toy",
+    "Description": "LED light toy for aquarium ambiance.",
+    "DistributorPrice": "7",
+    "Price": "14",
+    "BrandId": 20,
+    "CategoryId": 4
+  },
+  {
+    "Name": "Frisbee Disc for Dogs",
+    "Description": "Flying disc for dog fetch activities.",
+    "DistributorPrice": "5",
+    "Price": "10",
+    "BrandId": 16,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Cat Teaser Wand",
+    "Description": "Wand with dangling toy to tease cats.",
+    "DistributorPrice": "4",
+    "Price": "8",
+    "BrandId": 11,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Bird Chew Sticks",
+    "Description": "Natural chew sticks for birds.",
+    "DistributorPrice": "3",
+    "Price": "6",
+    "BrandId": 18,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Aquarium Plant Decor",
+    "Description": "Artificial plant decoration for fish tanks.",
+    "DistributorPrice": "3",
+    "Price": "6",
+    "BrandId": 20,
+    "CategoryId": 4
+  },
+  {
+    "Name": "Squeaky Rubber Duck",
+    "Description": "Squeaky duck toy for dogs.",
+    "DistributorPrice": "4",
+    "Price": "8",
+    "BrandId": 15,
+    "CategoryId": 2
+  }
+]

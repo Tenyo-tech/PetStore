@@ -11,8 +11,12 @@ namespace PetStore.Data.Entities
         [MaxLength(DataValidation.NameMaxLength)]
         public string Name { get; set; }
 
+        public string ImageUrl { get; set; } = string.Empty;
+
         // In KG.
         public double Weight { get; set; }
+
+        public Metric Metric { get; set; }
 
         public decimal DistributorPrice { get; set; }
 

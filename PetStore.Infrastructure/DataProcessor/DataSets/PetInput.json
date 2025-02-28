@@ -1,0 +1,170 @@
+[
+  {
+    "Gender": 0,
+    "DateOfBirth": "2024-11-15T10:00:00Z",
+    "Price": 2000,
+    "Description": "Playful Maine Coon kitten with silky fur.",
+    "BreedId": 39,
+    "CategoryId": 1
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2024-09-10T08:45:00Z",
+    "Price": 2500,
+    "Description": "Elegant Persian cat with a luxurious coat.",
+    "BreedId": 40,
+    "CategoryId": 1
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2024-06-05T14:00:00Z",
+    "Price": 1800,
+    "Description": "Loyal Bulgarian Shepherd Dog, perfect for guarding.",
+    "BreedId": 41,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2024-05-20T16:30:00Z",
+    "Price": 2200,
+    "Description": "Energetic Siberian Husky with bright blue eyes.",
+    "BreedId": 42,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2024-03-15T12:15:00Z",
+    "Price": 2800,
+    "Description": "Alert Doberman Pinscher, highly trainable.",
+    "BreedId": 43,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2023-12-25T09:00:00Z",
+    "Price": 2700,
+    "Description": "Intelligent German Shepherd puppy.",
+    "BreedId": 44,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2024-10-11T11:45:00Z",
+    "Price": 1600,
+    "Description": "Curious British Shorthair with golden eyes.",
+    "BreedId": 45,
+    "CategoryId": 1
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2024-07-08T13:30:00Z",
+    "Price": 2400,
+    "Description": "Charming French Bulldog, loves to cuddle.",
+    "BreedId": 46,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2024-04-04T15:20:00Z",
+    "Price": 2300,
+    "Description": "Affectionate Cavalier King Charles Spaniel.",
+    "BreedId": 47,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2024-01-10T10:50:00Z",
+    "Price": 2600,
+    "Description": "Gentle Ragdoll cat, great for families.",
+    "BreedId": 48,
+    "CategoryId": 1
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2023-11-25T18:00:00Z",
+    "Price": 1900,
+    "Description": "Fluffy Shih Tzu, loves being pampered.",
+    "BreedId": 49,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2024-06-30T09:10:00Z",
+    "Price": 2800,
+    "Description": "Exotic Bengal cat with striking patterns.",
+    "BreedId": 50,
+    "CategoryId": 1
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2024-08-18T14:40:00Z",
+    "Price": 1500,
+    "Description": "Energetic Yorkshire Terrier, loves to play.",
+    "BreedId": 51,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2024-02-14T16:15:00Z",
+    "Price": 2100,
+    "Description": "Strong and protective Boxer dog.",
+    "BreedId": 52,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2023-12-05T12:00:00Z",
+    "Price": 2300,
+    "Description": "Friendly Labrador Retriever, great with kids.",
+    "BreedId": 53,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2024-07-20T08:20:00Z",
+    "Price": 1400,
+    "Description": "Tiny but brave Chihuahua puppy.",
+    "BreedId": 54,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2024-05-11T14:30:00Z",
+    "Price": 2500,
+    "Description": "Intelligent and fluffy Poodle.",
+    "BreedId": 55,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2024-03-22T17:45:00Z",
+    "Price": 2700,
+    "Description": "Brave and loyal Airedale Terrier.",
+    "BreedId": 56,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2024-01-30T11:30:00Z",
+    "Price": 1900,
+    "Description": "Independent Shiba Inu with a fox-like appearance.",
+    "BreedId": 57,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 1,
+    "DateOfBirth": "2023-10-15T09:50:00Z",
+    "Price": 2100,
+    "Description": "Highly intelligent Border Collie.",
+    "BreedId": 58,
+    "CategoryId": 2
+  },
+  {
+    "Gender": 0,
+    "DateOfBirth": "2023-12-05T14:20:00Z",
+    "Price": 2900,
+    "Description": "Massive and gentle Saint Bernard.",
+    "BreedId": 59,
+    "CategoryId": 2
+  }
+]

@@ -11,6 +11,8 @@ namespace PetStore.Data.Entities
         [MaxLength(DataValidation.NameMaxLength)]
         public string Name { get; set; } = string.Empty;
 
+        public string ImageUrl { get; set; } = string.Empty;
+
         public ICollection<Pet> Pets { get; set; } = new HashSet<Pet>();
     }
 }

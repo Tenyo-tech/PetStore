@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetStore.Infrastructure.Data.Contexts;
 
@@ -11,9 +12,11 @@ using PetStore.Infrastructure.Data.Contexts;
 namespace PetStore.Infrastructure.Migrations
 {
     [DbContext(typeof(PetStoreDbContext))]
-    partial class PetStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250225125010_add-image-url")]
+    partial class addimageurl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

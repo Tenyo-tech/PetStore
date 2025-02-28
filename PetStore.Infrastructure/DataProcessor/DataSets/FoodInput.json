@@ -1,0 +1,209 @@
+[
+  {
+    "Name": "Purina Pro Plan Adult Cat",
+    "Weight": "85",
+    "DistributorPrice": 10,
+    "Price": 12,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "5",
+    "CategoryId": "1"
+  },
+  {
+    "Name": "Royal Canin Indoor 27",
+    "Weight": "85",
+    "DistributorPrice": 12,
+    "Price": 14,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "6",
+    "CategoryId": "1"
+  },
+  {
+    "Name": "Hill's Science Plan Adult Dog",
+    "Weight": "85",
+    "DistributorPrice": 15,
+    "Price": 18,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "7",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Acana Singles + Wholesome Grains",
+    "Weight": "85",
+    "DistributorPrice": 20,
+    "Price": 25,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "8",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Orijen Original",
+    "Weight": "85",
+    "DistributorPrice": 22,
+    "Price": 27,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "9",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Pedigree Adult Dry Dog Food",
+    "Weight": "85",
+    "DistributorPrice": 8,
+    "Price": 10,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "10",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Whiskas 1+ Adult Cat",
+    "Weight": "85",
+    "DistributorPrice": 6,
+    "Price": 8,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "11",
+    "CategoryId": "1"
+  },
+  {
+    "Name": "Eukanuba Adult Dog",
+    "Weight": "85",
+    "DistributorPrice": 18,
+    "Price": 22,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "12",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Farmina N&D Ancestral Grain",
+    "Weight": "85",
+    "DistributorPrice": 25,
+    "Price": 30,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "13",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Brit Care Grain-Free",
+    "Weight": "85",
+    "DistributorPrice": 20,
+    "Price": 24,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "14",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Trixie Cat Food",
+    "Weight": "85",
+    "DistributorPrice": 5,
+    "Price": 7,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "15",
+    "CategoryId": "1"
+  },
+  {
+    "Name": "Kong Dog Food",
+    "Weight": "85",
+    "DistributorPrice": 12,
+    "Price": 15,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "16",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Chuckit! Dog Food",
+    "Weight": "85",
+    "DistributorPrice": 10,
+    "Price": 12,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "17",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Ferplast Cat Food",
+    "Weight": "85",
+    "DistributorPrice": 7,
+    "Price": 9,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "18",
+    "CategoryId": "1"
+  },
+  {
+    "Name": "Hunter Pet Food",
+    "Weight": "85",
+    "DistributorPrice": 15,
+    "Price": 18,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "19",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Beco Pets Cat Food",
+    "Weight": "85",
+    "DistributorPrice": 8,
+    "Price": 10,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "20",
+    "CategoryId": "1"
+  },
+  {
+    "Name": "Flexi Dog Food",
+    "Weight": "85",
+    "DistributorPrice": 10,
+    "Price": 12,
+    "ExpirationDate": "2025-06-25T14:30:00Z",
+    "BrandId": "21",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Royal Canin Feline Health Nutrition",
+    "Weight": "400",
+    "DistributorPrice": 35,
+    "Price": 42,
+    "ExpirationDate": "2025-07-01T14:30:00Z",
+    "BrandId": "6",
+    "CategoryId": "1"
+  },
+  {
+    "Name": "Hill's Ideal Balance Dog Food",
+    "Weight": "500",
+    "DistributorPrice": 40,
+    "Price": 50,
+    "ExpirationDate": "2025-07-01T14:30:00Z",
+    "BrandId": "7",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Orijen Six Fish Dog Food",
+    "Weight": "250",
+    "DistributorPrice": 27,
+    "Price": 32,
+    "ExpirationDate": "2025-07-01T14:30:00Z",
+    "BrandId": "9",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Acana Wild Coast Cat Food",
+    "Weight": "250",
+    "DistributorPrice": 15,
+    "Price": 20,
+    "ExpirationDate": "2025-07-01T14:30:00Z",
+    "BrandId": "8",
+    "CategoryId": "1"
+  },
+  {
+    "Name": "Pedigree Jumbone Dog Chew",
+    "Weight": "150",
+    "DistributorPrice": 6,
+    "Price": 8,
+    "ExpirationDate": "2025-07-01T14:30:00Z",
+    "BrandId": "10",
+    "CategoryId": "2"
+  },
+  {
+    "Name": "Whiskas Jelly Adult Cat Food",
+    "Weight": "400",
+    "DistributorPrice": 8,
+    "Price": 10,
+    "ExpirationDate": "2025-07-01T14:30:00Z",
+    "BrandId": "11",
+    "CategoryId": "1"
+  }
+]
