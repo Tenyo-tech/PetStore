@@ -1,8 +1,13 @@
 using Microsoft.EntityFrameworkCore;
+using PetStore.Business.Services;
 using PetStore.Data.Context;
 using PetStore.Data.DataProcessor;
+using PetStore.Data.Repositories;
 using PetStore.Infrastructure.Data.Contexts;
+using PetStore.Infrastructure.Data.Repositories;
 using PetStore.Infrastructure.DataProcessor;
+using PetStore.Infrastructure.Mappings;
+using PetStore.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,9 +34,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(PetStoreMappings));
+
 builder.Services.AddTransient<IDeserializer, Deserializer>();
 builder.Services.AddTransient<ISerializer, Serializer>();
 builder.Services.AddTransient<IPetStoreDbContext, PetStoreDbContext>();
+
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+
+builder.Services.AddTransient<IBrandService, BrandService>();
+builder.Services.AddTransient<IBrandRepository, BrandRepository>();
+
 
 
 var app = builder.Build();
