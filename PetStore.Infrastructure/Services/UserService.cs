@@ -1,5 +1,6 @@
 ﻿using PetStore.Business.Services;
 using PetStore.Data.Dtos;
+using PetStore.Data.Entities;
 using PetStore.Data.Repositories;
 
 namespace PetStore.Infrastructure.Services
@@ -16,6 +17,11 @@ namespace PetStore.Infrastructure.Services
         public async Task<CreateUserDto?> CreateUser(CreateUserDto createUserDto)
         {
             return await userRepository.CreateUser(createUserDto);
+        }
+
+        public async Task<User> GetUserById(int id)
+        {
+            return await this.userRepository.GetUserById(id);
         }
 
         public async Task<bool> Exists(int userId)

@@ -28,6 +28,20 @@ namespace PetStore.Api.Controllers
             return Ok(user);
         }
 
+        [HttpGet("GetUserById")]
+        public async Task<IActionResult> GetUserById(int userId)
+        {
+            var user = await this.userService.GetUserById(userId);
+
+            if (user != null)
+            {
+                return NotFound(new { message = "User do not exist!" });
+            }
+
+            return Ok(user);
+
+        }
+
         [HttpGet("CheckUser")]
         public async Task<IActionResult> CheckUser(int userId)
         {

@@ -31,6 +31,13 @@ namespace PetStore.Infrastructure.Data.Repositories
             return createdUser;
         }
 
+        public async Task<User> GetUserById(int id)
+        {
+            var user = await this.petStoreDbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+
+            return user!;
+        }
+
         public async Task<bool> Exists(int userId)
         {
             var exist = await this.petStoreDbContext.Users.AnyAsync(x => x.Id == userId);

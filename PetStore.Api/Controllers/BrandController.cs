@@ -19,7 +19,7 @@ namespace PetStore.Api.Controllers
         [HttpPost("CreateBrand")]
         public async Task<IActionResult> CreateBrand(CreateBrandDto createBrandDto)
         {
-            var brand = await brandService.CreateBrand(createBrandDto);
+            var brand = await brandService.CreateBrandAsync(createBrandDto);
 
             if (brand == null)
             {
@@ -27,6 +27,27 @@ namespace PetStore.Api.Controllers
             }
 
             return Ok(brand);
+        }
+
+        [HttpGet("GetBrandById")]
+        public async Task<IActionResult> GetBrandById(int brandId)
+        {
+            var brand = await this.brandService.GetBrandByIdAsync(brandId);
+
+            if (brand == null)
+            {
+                return NotFound(new { message = "Cannot find brand" });
+            }
+
+            return Ok(brand);
+        }
+
+        [HttpGet("GetAllBrands")]
+        public async Task<IActionResult> GetAllBrands()
+        {
+            var brands = await this.brandService.GetAllBrandsAsync();
+
+            return Ok(brands);
         }
     }
 }

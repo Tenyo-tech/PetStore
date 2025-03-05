@@ -18,7 +18,7 @@ namespace PetStore.Infrastructure.Data.Repositories
             this.mapper = mapper;
         }
 
-        public async Task<CreateBrandDto?> CreateBrand(CreateBrandDto createBrandDto)
+        public async Task<CreateBrandDto?> CreateBrandAsync(CreateBrandDto createBrandDto)
         {
             var brand = mapper.Map<Brand>(createBrandDto);
 
@@ -29,6 +29,20 @@ namespace PetStore.Infrastructure.Data.Repositories
             var result = await petStoreDbContext.Brands.FirstOrDefaultAsync(x => x.Id == brand.Id);
             var createdBrand = mapper.Map<CreateBrandDto>(result);
             return createdBrand;
+        }
+
+        public async Task<Brand?> GetBrandByIdAsync(int id)
+        {
+            var brand = await this.petStoreDbContext.Brands.FirstOrDefaultAsync(x => x.Id == id);
+
+            return brand;
+        }
+
+        public async Task<IEnumerable<Brand>> GetAllBrandsAsync()
+        {
+            var brands = await this.petStoreDbContext.Brands.ToListAsync();
+
+            return brands;
         }
     }
 }
