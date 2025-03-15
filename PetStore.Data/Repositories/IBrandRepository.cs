@@ -1,5 +1,4 @@
-﻿using PetStore.Data.Dtos;
-using PetStore.Data.Entities;
+﻿using PetStore.Data.Dtos.Brand;
 
 namespace PetStore.Data.Repositories
 {
@@ -7,8 +6,12 @@ namespace PetStore.Data.Repositories
     {
         public Task<CreateBrandDto?> CreateBrandAsync(CreateBrandDto createBrandDto);
 
-        public Task<Brand?> GetBrandByIdAsync(int id);
+        public Task<BrandDto?> GetBrandByIdAsync(int id);
 
-        public Task<IEnumerable<Brand>> GetAllBrandsAsync();
+        public Task<IEnumerable<BrandDto>> GetAllBrandsAsync();
+
+        public Task<UpdateBrandDto?> UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto);
+
+        public Task<BrandDto?> DeleteBrandAsync(int id);
     }
 }

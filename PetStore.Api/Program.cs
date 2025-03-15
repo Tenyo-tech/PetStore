@@ -47,7 +47,23 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IBrandService, BrandService>();
 builder.Services.AddTransient<IBrandRepository, BrandRepository>();
 
+builder.Services.AddTransient<IBreedService, BreedService>();
+builder.Services.AddTransient<IBreedRepository, BreedRepository>();
 
+builder.Services.AddTransient<ICategoryService, CategoryService>();
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+builder.Services.AddTransient<IFoodService, FoodService>();
+builder.Services.AddTransient<IFoodRepository, FoodRepository>();
+
+builder.Services.AddTransient<IOrderService, OrderService>();
+builder.Services.AddTransient<IOrderRepository, OrderRepository>();
+
+builder.Services.AddTransient<IPetService, PetService>();
+builder.Services.AddTransient<IPetRepository, PetRepository>();
+
+builder.Services.AddTransient<IToyService, ToyService>();
+builder.Services.AddTransient<IToyRepository, ToyRepository>();
 
 var app = builder.Build();
 

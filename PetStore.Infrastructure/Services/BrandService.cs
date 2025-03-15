@@ -1,6 +1,5 @@
 ﻿using PetStore.Business.Services;
-using PetStore.Data.Dtos;
-using PetStore.Data.Entities;
+using PetStore.Data.Dtos.Brand;
 using PetStore.Data.Repositories;
 
 namespace PetStore.Infrastructure.Services
@@ -20,14 +19,26 @@ namespace PetStore.Infrastructure.Services
             return brand;
         }
 
-        public async Task<Brand?> GetBrandByIdAsync(int id)
+        public async Task<BrandDto?> GetBrandByIdAsync(int id)
         {
             return await this.brandRepository.GetBrandByIdAsync(id);
         }
 
-        public async Task<IEnumerable<Brand>> GetAllBrandsAsync()
+        public async Task<IEnumerable<BrandDto>> GetAllBrandsAsync()
         {
             return await this.brandRepository.GetAllBrandsAsync();
+        }
+
+        public async Task<UpdateBrandDto?> UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto)
+        {
+            var brand = await brandRepository.UpdateBrandAsync(id, updateBrandDto);
+
+            return brand;
+        }
+
+        public async Task<BrandDto?> DeleteBrandAsync(int id)
+        {
+            return await this.brandRepository.DeleteBrandAsync(id);
         }
     }
 }
