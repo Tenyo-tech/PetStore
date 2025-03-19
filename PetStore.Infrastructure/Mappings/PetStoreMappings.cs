@@ -47,7 +47,6 @@ namespace PetStore.Infrastructure.Mappings
             CreateMap<Category, UpdateCategoryDto>();
 
             // Food Mapping
-
             CreateMap<CreateFoodDto, Food>();
             CreateMap<Food, CreateFoodDto>();
 
@@ -61,11 +60,29 @@ namespace PetStore.Infrastructure.Mappings
             CreateMap<CreateOrderDto, Order>();
             CreateMap<Order, CreateOrderDto>();
 
-            CreateMap<OrderDto, Order>();
-            CreateMap<Order, OrderDto>();
+            //CreateMap<OrderDto, Order>();
+            //CreateMap<Order, OrderDto>();
 
             CreateMap<UpdateOrderDto, Order>();
             CreateMap<Order, UpdateOrderDto>();
+
+            // Mapping for Order -> OrderDto
+            //CreateMap<Order, OrderDto>()
+            //    .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()))
+            //    .ForMember(dest => dest.Pets, opt => opt.MapFrom(src => src.Pets)) // Direct pets mapping
+            //    .ForMember(dest => dest.Foods, opt => opt.MapFrom(src => src.Food.Select(fo => fo.Food))) // Many-to-Many
+            //    .ForMember(dest => dest.Toys, opt => opt.MapFrom(src => src.Toys.Select(to => to.Toy))); // Many-to-Many
+
+            CreateMap<Order, OrderDto>()
+            .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()))
+            .ForMember(dest => dest.Foods, opt => opt.MapFrom(src => src.Food.Select(fo => fo.Food)))
+            .ForMember(dest => dest.Toys, opt => opt.MapFrom(src => src.Toys.Select(to => to.Toy)));
+
+            // Mapping for OrderDto -> Order (not commonly needed)
+            //CreateMap<OrderDto, Order>()
+            //    .ForMember(dest => dest.Food, opt => opt.Ignore()) // Many-to-many needs manual handling
+            //    .ForMember(dest => dest.Toys, opt => opt.Ignore()) // Many-to-many needs manual handling
+            //    .ForMember(dest => dest.Pets, opt => opt.Ignore());
 
             // Pet Mappings
             CreateMap<CreatePetDto, Pet>();

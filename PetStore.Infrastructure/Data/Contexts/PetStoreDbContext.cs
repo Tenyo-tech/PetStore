@@ -33,6 +33,11 @@ namespace PetStore.Infrastructure.Data.Contexts
 
         public DbSet<ToyOrder> ToyOrders { get; set; }
 
+        ///// <summary>
+        ///// Allows transaction support
+        ///// </summary>
+        //DatabaseFacade Database { get; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -40,7 +45,12 @@ namespace PetStore.Infrastructure.Data.Contexts
             // Automatically apply all IEntityTypeConfiguration<T> classes
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
 
+            optionsBuilder.UseLazyLoadingProxies();
+        }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             return base.SaveChangesAsync(cancellationToken);

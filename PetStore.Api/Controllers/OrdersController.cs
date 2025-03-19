@@ -32,8 +32,15 @@ namespace PetStore.Api.Controllers
             return Ok(orders);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetOrders(int page, int take)
+        {
+            var orders = await orderService.GetOrdersAsync(page, take);
+            return Ok(orders);
+        }
+
         [HttpPost]
-        public async Task<IActionResult> CreateOrder(CreateOrderDto createOrderDto)
+        public async Task<IActionResult> Purchase(CreateOrderDto createOrderDto)
         {
             var order = await orderService.CreateOrderAsync(createOrderDto);
             return Ok(order);

@@ -13,6 +13,6 @@ namespace PetStore.Data.Entities
 
         public string ImageUrl { get; set; } = string.Empty;
 
-        public ICollection<Pet> Pets { get; set; } = new HashSet<Pet>();
+        public virtual ICollection<Pet> Pets { get; set; } = new HashSet<Pet>();
     }
 }

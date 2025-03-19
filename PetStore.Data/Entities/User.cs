@@ -14,6 +14,6 @@ namespace PetStore.Data.Entities
         [MaxLength(DataValidation.EmailMaxLength)]
         public string Email { get; set; }
 
-        public ICollection<Order> Orders { get; set; } = new HashSet<Order>();
+        public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
     }
 }

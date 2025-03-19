@@ -26,7 +26,12 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<PetStoreDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PetStoreConnection"));
+});
+
+builder.Services.AddDbContext<PetStoreConfigsDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PetStoreConfigConnection"));
 });
 
 builder.Services.AddControllers();

@@ -13,10 +13,10 @@ namespace PetStore.Data.Entities
         [MaxLength(DataValidation.DescriptionMaxLength)]
         public string Description { get; set; } = string.Empty;
 
-        public ICollection<Pet> Pets { get; set; } = new HashSet<Pet>();
+        public virtual ICollection<Pet> Pets { get; set; } = new HashSet<Pet>();
 
-        public ICollection<Toy> Toys { get; set; } = new HashSet<Toy>();
+        public virtual ICollection<Toy> Toys { get; set; } = new HashSet<Toy>();
 
-        public ICollection<Food> Food { get; set; } = new HashSet<Food>();
+        public virtual ICollection<Food> Food { get; set; } = new HashSet<Food>();
     }
 }

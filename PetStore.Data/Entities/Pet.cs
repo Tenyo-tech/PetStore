@@ -17,14 +17,14 @@ namespace PetStore.Data.Entities
 
         public int BreedId { get; set; }
 
-        public Breed Breed { get; set; }
+        public virtual Breed Breed { get; set; }
 
         public int CategoryId { get; set; }
 
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
         public int? OrderId { get; set; }
 
-        public Order Order { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

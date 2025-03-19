@@ -13,7 +13,7 @@ namespace PetStore.Infrastructure.Services
             this.orderRepository = orderRepository;
         }
 
-        public async Task<CreateOrderDto?> CreateOrderAsync(CreateOrderDto createOrderDto)
+        public async Task<OrderDto?> CreateOrderAsync(CreateOrderDto createOrderDto)
         {
             return await orderRepository.CreateOrderAsync(createOrderDto);
         }
@@ -26,6 +26,11 @@ namespace PetStore.Infrastructure.Services
         public async Task<IEnumerable<OrderDto>> GetAllOrdersAsync()
         {
             return await orderRepository.GetAllOrdersAsync();
+        }
+
+        public async Task<IEnumerable<OrderDto>> GetOrdersAsync(int page, int take)
+        {
+            return await orderRepository.GetOrdersAsync(page, take);
         }
 
         public async Task<UpdateOrderDto?> UpdateOrderAsync(int id, UpdateOrderDto updateOrderDto)

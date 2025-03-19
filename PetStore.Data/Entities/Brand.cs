@@ -12,8 +12,8 @@ namespace PetStore.Data.Entities
 
         public string ImageUrl { get; set; } = string.Empty;
 
-        public ICollection<Toy> Toys { get; set; } = new HashSet<Toy>();
+        public virtual ICollection<Toy> Toys { get; set; } = new HashSet<Toy>();
 
-        public ICollection<Food> Food { get; set; } = new HashSet<Food>();
+        public virtual ICollection<Food> Food { get; set; } = new HashSet<Food>();
     }
 }

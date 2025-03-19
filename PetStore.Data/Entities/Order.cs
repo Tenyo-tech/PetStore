@@ -10,12 +10,12 @@
 
         public int UserId { get; set; }
 
-        public User User { get; set; }
+        public virtual User User { get; set; }  // ✅ Lazy Loading Enabled
 
-        public ICollection<Pet> Pets { get; set; } = new HashSet<Pet>();
+        public virtual ICollection<Pet> Pets { get; set; } = new HashSet<Pet>();  // ✅ Lazy Loading Enabled
 
-        public ICollection<FoodOrder> Food { get; set; } = new HashSet<FoodOrder>();
+        public virtual ICollection<FoodOrder> Food { get; set; } = new HashSet<FoodOrder>();  // ✅ Lazy Loading Enabled
 
-        public ICollection<ToyOrder> Toys { get; set; } = new HashSet<ToyOrder>();
+        public virtual ICollection<ToyOrder> Toys { get; set; } = new HashSet<ToyOrder>();  // ✅ Lazy Loading Enabled
     }
 }
