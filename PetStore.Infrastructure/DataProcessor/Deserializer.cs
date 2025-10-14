@@ -11,10 +11,12 @@ namespace PetStore.Infrastructure.DataProcessor
     {
         private string baseDir = "";
         private readonly IPetStoreDbContext petStoreDbContext;
+        private readonly IPetStoreConfigsDbContext petStoreConfigsDbContext;
 
-        public Deserializer(IPetStoreDbContext petStoreDbContext)
+        public Deserializer(IPetStoreDbContext petStoreDbContext, IPetStoreConfigsDbContext petStoreConfigsDbContext)
         {
             this.petStoreDbContext = petStoreDbContext;
+            this.petStoreConfigsDbContext = petStoreConfigsDbContext;
         }
         public async Task<string> ImportBrand()
         {
@@ -168,6 +170,31 @@ namespace PetStore.Infrastructure.DataProcessor
             }
 
             await petStoreDbContext.SaveChangesAsync();
+
+            return jsonString;
+        }
+
+
+        public async Task<string> ImportConfig()
+        {
+            var jsonString = GetJsonString("ConfigInput.json");
+            var configs = JsonConvert.DeserializeObject<IEnumerable<ConfigImportDto>>(jsonString);
+
+            foreach (var dto in configs)
+            {
+                if (IsValid(dto))
+                {
+                    var config = new Config()
+                    {
+                        Key = dto.Key,
+                        Value = dto.Value,
+                    };
+
+                    petStoreConfigsDbContext.Configs.Add(config);
+                }
+            }
+
+            await petStoreConfigsDbContext.SaveChangesAsync();
 
             return jsonString;
         }

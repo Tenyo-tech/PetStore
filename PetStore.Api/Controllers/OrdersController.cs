@@ -25,14 +25,14 @@ namespace PetStore.Api.Controllers
             return Ok(order);
         }
 
-        [HttpGet]
+        [HttpGet("GetAllOrders")]
         public async Task<IActionResult> GetAllOrders()
         {
             var orders = await orderService.GetAllOrdersAsync();
             return Ok(orders);
         }
 
-        [HttpGet]
+        [HttpGet("GetOrdersByPage")]
         public async Task<IActionResult> GetOrders(int page, int take)
         {
             var orders = await orderService.GetOrdersAsync(page, take);

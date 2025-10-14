@@ -44,7 +44,9 @@ builder.Services.AddAutoMapper(typeof(PetStoreMappings));
 
 builder.Services.AddTransient<IDeserializer, Deserializer>();
 builder.Services.AddTransient<ISerializer, Serializer>();
+
 builder.Services.AddTransient<IPetStoreDbContext, PetStoreDbContext>();
+builder.Services.AddTransient<IPetStoreConfigsDbContext, PetStoreConfigsDbContext>();
 
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
@@ -78,6 +80,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 

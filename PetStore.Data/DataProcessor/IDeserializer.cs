@@ -8,5 +8,7 @@
         public Task<string> ImportFood();
         public Task<string> ImportPet();
         public Task<string> ImportToy();
+
+        public Task<string> ImportConfig();
     }
 }

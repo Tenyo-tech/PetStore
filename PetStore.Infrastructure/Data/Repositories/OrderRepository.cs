@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using PetStore.Data.Context;
 using PetStore.Data.Dtos.Order;
 using PetStore.Data.Entities;
@@ -10,14 +11,15 @@ namespace PetStore.Infrastructure.Data.Repositories
     public class OrderRepository : IOrderRepository
     {
         private readonly IPetStoreDbContext petStoreDbContext;
+        private readonly IPetStoreConfigsDbContext petStoreConfigsDbContext;
         private readonly IMapper mapper;
 
-        public OrderRepository(IPetStoreDbContext petStoreDbContext, IMapper mapper)
+        public OrderRepository(IPetStoreDbContext petStoreDbContext, IPetStoreConfigsDbContext petStoreConfigsDbContext, IMapper mapper)
         {
             this.petStoreDbContext = petStoreDbContext;
+            this.petStoreConfigsDbContext = petStoreConfigsDbContext;
             this.mapper = mapper;
         }
-
 
         //This Method is desing for educational purposes 
         public async Task<OrderDto?> CreateOrderAsync(CreateOrderDto createOrderDto)
@@ -137,6 +139,7 @@ namespace PetStore.Infrastructure.Data.Repositories
 
                     //Solution: Convert to a List Before Looping
                     var petsList = orderLazy.Pets.ToList(); // ✅ Loads all pets in one query
+                    //If we have milions of records this may be a problem depends on the resource we have
 
                     foreach (var pet in petsList)
                     {
@@ -199,16 +202,42 @@ namespace PetStore.Infrastructure.Data.Repositories
 
         public async Task<UpdateOrderDto?> UpdateOrderAsync(int id, UpdateOrderDto updateOrderDto)
         {
-            var order = await petStoreDbContext.Orders.FirstOrDefaultAsync(x => x.Id == id);
-            if (order != null)
+            // Start a transaction on the main context
+            await using var transaction = await petStoreDbContext.Database.BeginTransactionAsync();
+            try
             {
-                order.PurchaseDate = updateOrderDto.PurchaseDate;
-                order.Status = updateOrderDto.Status;
+                var order = await petStoreDbContext.Orders.FirstOrDefaultAsync(x => x.Id == id);
+                if (order != null)
+                {
+                    order.PurchaseDate = updateOrderDto.PurchaseDate;
+                    order.Status = updateOrderDto.Status;
+                    await petStoreDbContext.SaveChangesAsync();
+                }
 
-                await petStoreDbContext.SaveChangesAsync();
+                // Share the transaction with the config context
+                var dbTransaction = transaction.GetDbTransaction();
+                await petStoreConfigsDbContext.Database.UseTransactionAsync(dbTransaction);
+
+                // Update the config with key "Europe"
+                var config = await petStoreConfigsDbContext.Configs.FirstOrDefaultAsync(c => c.Key == "Europe");
+                if (config != null)
+                {
+                    config.Value = DateTime.Now.ToString();
+                    await petStoreConfigsDbContext.SaveChangesAsync();
+                }
+                else
+                {
+                    throw new Exception("Test");
+                }
+
+                await transaction.CommitAsync();
+                return mapper.Map<UpdateOrderDto>(order);
             }
-
-            return mapper.Map<UpdateOrderDto>(order);
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
         public async Task<OrderDto?> DeleteOrderAsync(int id)

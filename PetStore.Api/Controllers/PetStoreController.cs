@@ -28,6 +28,7 @@ namespace PetStore.Api.Controllers
             //var food = await deserializer.ImportFood();
             //var pets = await deserializer.ImportPet();
             //var toys = await deserializer.ImportToy();
+            //var petStoreConfig = await deserializer.ImportConfig();
             return Ok();
         }
     }
