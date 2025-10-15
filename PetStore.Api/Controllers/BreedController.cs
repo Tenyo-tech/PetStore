@@ -6,11 +6,11 @@ namespace PetStore.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class BreedsController : ControllerBase
+    public class BreedController : ControllerBase
     {
         private readonly IBreedService breedService;
 
-        public BreedsController(IBreedService breedService)
+        public BreedController(IBreedService breedService)
         {
             this.breedService = breedService;
         }

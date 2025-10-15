@@ -15,7 +15,7 @@ namespace PetStore.Api.Controllers
             this.userService = userService;
         }
 
-        [HttpPost("CreateUser")]
+        [HttpPost]
         public async Task<IActionResult> CreateUser(CreateUserDto createUserDto)
         {
             var user = await userService.CreateUser(createUserDto);
@@ -28,7 +28,7 @@ namespace PetStore.Api.Controllers
             return Ok(user);
         }
 
-        [HttpGet("GetUserById")]
+        [HttpGet("{userId}")]
         public async Task<IActionResult> GetUserById(int userId)
         {
             var user = await this.userService.GetUserById(userId);
@@ -42,7 +42,7 @@ namespace PetStore.Api.Controllers
 
         }
 
-        [HttpGet("CheckUser")]
+        [HttpGet("{userId}/exists")]
         public async Task<IActionResult> CheckUser(int userId)
         {
             var exist = await userService.Exists(userId);
