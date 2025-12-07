@@ -72,6 +72,9 @@ builder.Services.AddTransient<IPetRepository, PetRepository>();
 builder.Services.AddTransient<IToyService, ToyService>();
 builder.Services.AddTransient<IToyRepository, ToyRepository>();
 
+builder.Services.AddTransient<IPracticeService, PracticeService>();
+builder.Services.AddTransient<IPracticeRepository, PracticeRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
