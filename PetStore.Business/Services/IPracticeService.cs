@@ -8,5 +8,7 @@ namespace PetStore.Business.Services
         string GetMessage();
         Task<PracticeResultDto> PracticeTasksAsync();
         PracticeResultDto PracticeThreads();
+        Task<object> PracticeConcurrencyAsync();
+        Task PracticeAsyncVoidAsync();
     }
 }

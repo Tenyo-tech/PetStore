@@ -4,6 +4,7 @@ using PetStore.Data.Context;
 using PetStore.Data.Dtos.Brand;
 using PetStore.Data.Dtos.Food;
 using PetStore.Data.Dtos.Practice;
+using PetStore.Data.Dtos.Toy;
 using PetStore.Data.Repositories;
 using System.Diagnostics;
 
@@ -59,7 +60,7 @@ namespace PetStore.Infrastructure.Data.Repositories
             //• Not for scenarios where you must force a dedicated thread.
             var stopwatch = Stopwatch.StartNew();
 
-            var brandCount = await petStoreDbContext.Brands.CountAsync();
+            var brandCount = await petStoreDbContext.Brands.CountAsync().con;
 
             //async means:
             //This method can pause without blocking a thread.
@@ -67,6 +68,26 @@ namespace PetStore.Infrastructure.Data.Repositories
             //await means:
             //Pause here until this task finishes, and meanwhile free the thread.
 
+            //.Result blocks the thread.
+
+            //Task.Wait() is basically the same as .Result but without returning a value.
+
+            //ConfigureAwait(false) Means:
+
+            //Pause here
+            //Free the thread
+            //Continue later
+            //But you don’t care which thread continues the method
+
+            //With false
+            //Continue on any thread.
+            //Faster.
+            //Avoids deadlocks in libraries and background code.
+
+
+            //await = non - blocking wait
+            //.Result / .Wait = blocking wait
+            //ConfigureAwait(false) = don’t return to UI thread; finish anywhere
             if (brandCount == 0)
             {
                 stopwatch.Stop();
@@ -173,6 +194,54 @@ namespace PetStore.Infrastructure.Data.Repositories
                 result.ElapsedMilliseconds = stopwatch.ElapsedMilliseconds;
 
             return result;
+        }
+
+        // Concurrency Example Methods
+        // These two methods demonstrate concurrency when called together with Task.WhenAll
+
+        public async Task<IEnumerable<FoodDto>> GetAllFoodsAsync()
+        {
+            var foods = await petStoreDbContext.Food.ToListAsync();
+            return mapper.Map<IEnumerable<FoodDto>>(foods);
+        }
+
+        public async Task<IEnumerable<ToyDto>> GetAllToysAsync()
+        {
+            var toys = await petStoreDbContext.Toys.ToListAsync();
+            return mapper.Map<IEnumerable<ToyDto>>(toys);
+        }
+
+        public async Task PracticeAsyncVoidAsync()
+        {
+            // async void is DANGEROUS and should almost NEVER be used.
+            // This method demonstrates why with comments.
+
+            // ❌ WRONG - do NOT do this (example of what NOT to do):
+            // async void BadMethod()
+            // {
+            //     await Task.Delay(1000);
+            //     // If an exception happens here, it will CRASH the app because there's no way to catch it.
+            //     throw new Exception("Error!");
+            // }
+
+            // ✅ CORRECT - always use async Task instead:
+            // async Task GoodMethod()
+            // {
+            //     await Task.Delay(1000);
+            //     // Exceptions can be caught by the caller.
+            //     throw new Exception("Error!");
+            // }
+
+            // This method uses async Task (correct).
+            // It simulates an operation that you cannot "await" from the controller.
+            // (In real life, only use async void for event handlers like button clicks).
+
+            await Task.Delay(500);
+
+            var allFoods = await petStoreDbContext.Food.ToListAsync();
+            var foodCount = allFoods.Count;
+
+            // No return value, but exception handling is possible because it's async Task.
         }
     }
 }
